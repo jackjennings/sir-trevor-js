@@ -339,7 +339,7 @@ SirTrevor.Editor = (function(){
 
     saveBlockStateToStore: function(block) {
       var store = block.saveAndReturnData();
-      if(store && !_.isEmpty(store.data)) {
+      if(store) {
         SirTrevor.log("Adding data for block " + block.blockID + " to block store");
         this.store("add", { data: store });
       }
